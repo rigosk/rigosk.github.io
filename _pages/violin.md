@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Memoirs, a free minimalist Jekyll blogging theme with modern design 
 permalink: /violin
 comments: false
