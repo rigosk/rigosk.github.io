@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: default
 title: Memoirs, a free minimalist Jekyll blogging theme with modern design 
 permalink: /violin
 comments: false
-image: assets/images/screenshot.jpg
+image: 
 imageshadow: true
 ---
 
