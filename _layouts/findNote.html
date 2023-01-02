@@ -6,6 +6,8 @@
 <script src="assets/js/abcjs-basic-min.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9903823573193220"
      crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="assets/css/violin.css">
 <script>
 
  const scales = ["C", "G", "D", "A", "E", "B", "dF","dC","F","Bf","Ef","Af"];
@@ -18,9 +20,6 @@ const random = Math.floor(Math.random() * scales.length);
 
 const randomNote=Math.floor(Math.random() * notesOnScales["C"].length);
 abcString=notesOnScales["C"][randomNote]
-//console.log(randomNote,notesOnScales["C"][randomNote]);
-  //const audio = new Audio("images/356181__mtg__violin-d5.wav");
- // const sounds=new Array("images/356181__mtg__violin-d5.wav");
   function play_m(note){
      var audio = new Audio();
     audio.src="assets/sounds/"+note+".wav";
@@ -77,87 +76,10 @@ var visualObj = ABCJS.renderAbc("paper", abcString, visualOptions);
 </script>
 <style>
 
-  .column {
-   float: left;
-  /*width: 50%;*/
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-  #G4{
-    position: absolute;
-    left: 35.96%;
-    top: 38.91%;
-    width: 8%;
-    height: 2.96%;
-    z-index: 2;
-  }
-   span.circle {
-        background: rgb(9 13 228 / 50%);
-        border-radius: 50%;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        color: #ffffff;
-        display: inline-block;
-        font-weight: bold;
-        line-height: 25px;
-        margin-right: 5px;
-        text-align: center;
-        width: 25px;
-        
-        transition: .7s ease;
-        opacity:0;
-        visibility:hidden;
-      }
-  }
-* {box-sizing: border-box;}
-
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-}
-
-.image {
-  display: block;
-  /*width: 100%;*/
-  max-width: 100%;
-  /*height: auto;*/
-}
-
-.overlay {
-  position: absolute; 
-  border-radius: 50%;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-  top: 50px; 
-  left: 50px;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1; 
-  width: 25%;
-   font-weight: bold;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-}
-
-.container:hover .overlay2 {
-  opacity: 1;
-}
-
 </style>
 </head>
 <body onload="load()">
-<div id="paper"></div>
+
 
 
 <div class="row">
@@ -165,8 +87,8 @@ var visualObj = ABCJS.renderAbc("paper", abcString, visualOptions);
   <div class="column" valign="top" align="center" height="200">
     <h2>Notes on the Violin</h2>
 <p>Press note to hear.</p>
-
-  <img width="82" height="200" src="assets/images/notesext/staff_clef.gif"><img id="image-note" width="74" height="200" src="assets/images/notesext/d_blank.png"><img width="37" height="200" src="assets/images/notesext/staff_blank.gif"><img width="39" height="200" src="assets/images/notesext/staff_end.gif"></div>
+<div id="paper"></div>
+  </div>
 
   <div class="column container">
   
