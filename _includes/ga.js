@@ -1,5 +1,4 @@
-<!--This function will load script and call the callback once the script has loaded-->
-<script>
+/*This function will load script and call the callback once the script has loaded*/
 function loadScriptAsync(scriptSrc, callback) {
     if (typeof callback !== 'function') {
         throw new Error('Not a valid callback for async script load');
@@ -10,12 +9,11 @@ function loadScriptAsync(scriptSrc, callback) {
     document.head.appendChild(script);
 }
 
-<!-- /* This is the part where you call the above defined function and "calls back" your code which gets executed after the script has loaded */-->
+/* This is the part where you call the above defined function and "calls back" your code which gets executed after the script has loaded */
 
-loadScriptAsync('https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX', function () {
+loadScriptAsync('https://www.googletagmanager.com/gtag/js?id=ca-pub-9903823573193220', function () {
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-153177304-1', { 'anonymize_ip': true });
 })
-</script>
